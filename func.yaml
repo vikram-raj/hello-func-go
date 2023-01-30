@@ -3,7 +3,7 @@ name: hello-func-go
 runtime: go
 registry: image-registry.openshift-image-registry.svc:5000/viraj
 image: image-registry.openshift-image-registry.svc:5000/viraj/hello-func-go:latest
-imageDigest: sha256:3375c0d79b40e8ba1197cc02fc3612d4a6cb23e23a8a426700f6c6d1f4e3f7a9
+imageDigest: sha256:61ef4ad96c14bc8cb6657cc3a0e6788fa39f9bcf9cd9ffa9c78d5c34d0a95b93
 created: 2022-12-06T13:23:09.244792694+05:30
 invocation:
   format: http
