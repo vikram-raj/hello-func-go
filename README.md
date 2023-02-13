@@ -12,7 +12,7 @@ Update the running analog of the function using the `func` CLI or client
 library, and it can be invoked from your browser or from the command line:
 
 ```console
-curl http://myfunction.example.com/
+curl http://myfunction.example.com
 ```
 
 For more, see [the complete documentation]('https://github.com/knative/func/tree/main/docs')
