@@ -30,7 +30,9 @@ func prettyPrint(req *http.Request) string {
 	}
 
 	if req.Method == "POST" {
-		req.ParseForm()
+		if req != nil {
+			req.ParseForm()
+		}
 		fmt.Fprintln(b, "Body:")
 		for k, v := range req.Form {
 			fmt.Fprintf(b, "  %v: %v\n", k, v)
