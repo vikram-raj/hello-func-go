@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strings"
 )
+import "log"
 
 // Handle an HTTP Request.
 func Handle(ctx context.Context, res http.ResponseWriter, req *http.Request) {
@@ -17,7 +18,7 @@ func Handle(ctx context.Context, res http.ResponseWriter, req *http.Request) {
 
 	fmt.Println("Received request")
 	fmt.Println(prettyPrint(req))      // echo to local output
-	fmt.Fprintf(res, prettyPrint(req)) // echo to caller
+	fmt.Fprint(res, prettyPrint(req)) // echo to caller
 }
 
 func prettyPrint(req *http.Request) string {
@@ -30,7 +31,10 @@ func prettyPrint(req *http.Request) string {
 	}
 
 	if req.Method == "POST" {
-		req.ParseForm()
+		err := req.ParseForm()
+		if err != nil {
+			log.Fatal(err)
+		}
 		fmt.Fprintln(b, "Body:")
 		for k, v := range req.Form {
 			fmt.Fprintf(b, "  %v: %v\n", k, v)
