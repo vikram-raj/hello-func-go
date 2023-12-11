@@ -20,4 +20,4 @@ For more, see [the complete documentation]('https://github.com/knative/func/tree
 
 https://github.com/vikram-raj/hello-func-go
 
-PAC-TEST-0
+PAC-TEST-1
