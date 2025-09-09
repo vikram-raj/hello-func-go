@@ -1,3 +1,5 @@
+---
+
 # Go HTTP Function
 
 Welcome to your new Go Function! The boilerplate function code can be found in
