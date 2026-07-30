@@ -1,5 +1,3 @@
-# Test
-
 ---
 
 # Go HTTP Function
